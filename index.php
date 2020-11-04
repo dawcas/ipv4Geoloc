@@ -8,7 +8,7 @@ use IPTools\IP;
 <html lang="es">
 
     <head>
-        <title>ipv4 geoloc</title>
+        <title>IPv4 Geoloc</title>
         <meta charset='utf-8'>
         <link rel='stylesheet' type='text/css' href='styles.css'>
     </head>
