@@ -15,7 +15,7 @@ use IPTools\IP;
 
     <body>
 <?php
-if ($_POST && !empty($_POST['num']) && preg_match('/[0-9]+/', $_POST['num'])) {
+if ($_POST && !empty($_POST['num']) && preg_match('/^[0-9]+$/', $_POST['num'])) {
     $ipAddr = (string)IP::parse($_POST['num']);
     $ip = new IPinfo();
     $detalles = $ip->getDetails($ipAddr);
@@ -69,7 +69,7 @@ if ($_POST && !empty($_POST['num']) && preg_match('/[0-9]+/', $_POST['num'])) {
         </h2>
         <form method='post'>
             <label for='num'>Introduzca el número entero:</label><br>
-            <input type='number' name='num' id='num' pattern='[0-9]+' placeholder='nº entero'><br>
+            <input type='number' name='num' id='num' pattern='^[0-9]+$' placeholder='nº entero'><br>
             <input type='submit' value='Calcular'>
         </form>
 <?php
